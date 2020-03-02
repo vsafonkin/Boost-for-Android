@@ -14,5 +14,6 @@ jobs:
         ls /usr/local/opt/runner/settings/instancename
     - name: Run script
       run: |
+        sudo spctl --master-disable
         chmod +x ./run.sh
         ./run.sh

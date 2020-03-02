@@ -14,6 +14,6 @@ jobs:
         ls /usr/local/opt/runner/settings/instancename
     - name: Run script
       run: |
-        sudo spctl --master-disable
+        sudo find /usr/local/Caskroom/android-ndk/19 -name *.dylib -execdir xattr -d com.apple.quarantine {} \;
         chmod +x ./run.sh
         ./run.sh

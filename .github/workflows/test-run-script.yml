@@ -11,5 +11,5 @@ jobs:
     - uses: actions/checkout@v2
     - name: Run script
       run: |
-        sudo chmod +x ./run.sh
-        sudo ./run.sh
+        chmod +x ./run.sh
+        ./run.sh

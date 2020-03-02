@@ -9,6 +9,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Detect Machine
+      run: |
+        ls /usr/local/opt/runner/settings/instancename
     - name: Run script
       run: |
         chmod +x ./run.sh

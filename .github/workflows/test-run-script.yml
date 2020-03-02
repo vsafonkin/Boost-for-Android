@@ -10,4 +10,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run script
-      run: ./run.sh
+      run: |
+        sudo chmod +x ./run.sh
+        sudo ./run.sh

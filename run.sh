@@ -15,7 +15,7 @@ mkdir -p logs/macos
 
 echo "Install dependencies..."
 brew update 
-brew cask install android-ndk --no-c
+brew cask install android-ndk
 export NDK_ROOT="$(brew --prefix)/share/android-ndk"
 echo "::set-env name=NDK_ROOT::$NDK_ROOT"
 

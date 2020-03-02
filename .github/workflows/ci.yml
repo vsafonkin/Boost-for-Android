@@ -35,12 +35,12 @@ jobs:
     - name: Install dependencies (MacOS))
       run: |
         brew update
-        brew cask install android-ndk
+        brew cask install android-ndk --no-quarantine
         export NDK_ROOT="$(brew --prefix)/share/android-ndk"
         echo "::set-env name=NDK_ROOT::$NDK_ROOT"
       if: matrix.os == 'macos-latest'
     - name: Build Boost for Android on ${{ matrix.variation }}
-      run: CXXFLAGS="-std=c++14" ./build-android.sh --boost=1.70.0 --arch=x86_64 --with-libraries=atomic,system "${NDK_ROOT}"
+      run: CXXFLAGS="-std=c++14" ./build-android.sh --boost=1.70.0 --arch=armeabi-v7a --with-libraries=atomic,system "${NDK_ROOT}"
     - name: Prepare Binaries
       run: |
         set -x

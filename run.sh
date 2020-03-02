@@ -18,4 +18,4 @@ export NDK_ROOT="$(brew --prefix)/share/android-ndk"
 echo "::set-env name=NDK_ROOT::$NDK_ROOT"
 
 echo "Run build..."
-CXXFLAGS="-std=c++1z" ./build-android.sh --boost=1.70.0 --arch=armeabi-v7a --with-libraries=atomic,system "${NDK_ROOT}"
+CXXFLAGS="-std=c++14" ./build-android.sh --boost=1.70.0 --arch=armeabi-v7a --with-libraries=atomic,system "${NDK_ROOT}"
